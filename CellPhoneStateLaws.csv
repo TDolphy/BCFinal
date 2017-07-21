@@ -1,4 +1,4 @@
-States,Hand-held ban,All cell phone ban,Texting ban,Enforcement,Crash Data Collection ,
+state,handHeldBan,allCellPhoneBan,textBan,enforcement,crashDataCollection,
 Alabama,No,Drivers age 16 and 17 who have held an intermediate license for less than 6 months.,All drivers,Primary (effective 08/01/2017), ,
 Alaska,No,No,All drivers,Primary,Yes,
 Arizona,No,School bus drivers; Learner's permit and provisional license holders during the first six months after licensing (effective 6/30/2018),No,"Primary: cell phone use by school bus drivers Secondary: cell phone use by young drivers (effective 6/30/2018)",Yes,
@@ -19,7 +19,7 @@ Iowa,No,Learner's permit and intermediate license holders,All drivers,"Primary: 
 Kansas,No,Learner's permit and intermediate license holders,All drivers,Primary,Yes,
 Kentucky,No,"Drivers younger than 18, School Bus Drivers.",All drivers,Primary,Yes,
 Louisiana,No,"School bus drivers, learner's permit and intermediate license holders, drivers under age 18",All drivers,Primary,Yes,
-Maine**,No,Learner's permit and intermediate license holders,All drivers,Primary,Yes,
+Maine,No,Learner's permit and intermediate license holders,All drivers,Primary,Yes,
 Maryland,"All drivers, School Bus Drivers.",Learner's permit and intermediate license holders under 18. School bus drivers.,All drivers,Primary,Yes,
 Massachusetts,Local option,"School bus drivers,
 passenger bus drivers, drivers younger than 18.",All drivers,Primary,Yes,
@@ -54,7 +54,7 @@ Virgin Islands,Yes, , , ,Yes,
 Virginia,No,Drivers younger than 18 and school bus drivers, All drivers,"Primary: for texting by all drivers.  
 Secondary: for drivers younger than 18.",Yes,
 Washington,All drivers,Learner's permit and intermediate license holders., All drivers,Primary,Yes,
-West Virginia,All Drivers,Drivers younger than 18 who hold either a learner's permit or an intermediate license , All drivers,Primary, ,
+West Virginia,All Drivers,Drivers younger than 18 who hold either a learner's permit or an intermediate license, All drivers,Primary, ,
 Wisconsin,No,"Learner's permit or
 intermediate
 license holder",All drivers,Primary, ,

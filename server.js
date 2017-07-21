@@ -44,14 +44,13 @@ app.get("/all", function(req, res) {
 });
 
 
-// 3. At the "/name" path, display every entry in the animals collection, sorted by name
 app.get("/state/:state?", function(req, res) {
   var state = req.params.state;
 
   if (state) {
     console.log(state);
   // Query: In our database, go to the state cell phone laws collection, then "find" the matching data
-  db.stateCellPhoneLaws.find({ "States" : state }, function(error, found) {
+  db.stateCellPhoneLaws.find({ "state" : state }, function(error, found) {
     // Log any errors if the server encounters one
     if (error) {
       console.log(error);
@@ -74,6 +73,7 @@ else {
     }
   });
 }
+
 
 });
 

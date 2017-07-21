@@ -76,6 +76,7 @@
                     </div>
                     <div style="margin: 8px; font-style: italic">is in</div>
                     <div id="divCountyName"></div>
+                    <div id="stateResults"></div>
                 </div>
 
             </div>
@@ -111,6 +112,19 @@
             });
         }
 
+        function showStateData(state) {
+            var useState = state.replace(/\s+/g, "");
+
+$.getJSON("/state/" + useState, function(data) {
+    // Append each of the animal's properties to the table
+    $("#stateResults").append("For the state of " + data[0].state + " the following are in effect:" + 
+                         "<ul style='list-style-type:none'><li>A ban on hand held phone usage: " + data[0].handHeldBan + "</li>" +
+                         "<li>Certain drivers cannot use a cell phone at all while operating a vehicle: " + data[0].allCellPhoneBan + "</li>" +
+                         "<li>Banned from texting and driving: " + data[0].textBan + "</li>" +
+                         "<li>What is the level of enforcement of these laws? " + data[0].enforcement + "</li></ul>");
+  });
+        }
+
         //Function to take address, geocode, and return location info
         function geocodeAddress(geocoder, resultsMap) {
             var address = document.getElementById('address').value;
@@ -132,7 +146,10 @@
                                 $.each(results[0].address_components, function(index, value) {
                                     // Set state variable based on location object
                                     if (value.types[0] === "administrative_area_level_1") {
-                                        state = value ? value.short_name : null;
+                                        state = value ? value.long_name : null;
+                                        // Displays law info based on state
+                                        showStateData(state);
+                                        
                                     }
                                 });
                                 $('#map-embed-iframe').attr('src', createMapEmbedSrc(
